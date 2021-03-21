@@ -1,10 +1,14 @@
 package core.principles.discount;
 
+import core.principles.annotation.MainDiscountPolicy;
 import core.principles.member.Grade;
 import core.principles.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;

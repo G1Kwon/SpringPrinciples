@@ -15,7 +15,8 @@ import org.springframework.context.annotation.FilterType;
 )
 public class AutoAppConfig {
 
-/*    @Bean(name = "memoryMemberRepository")
+/* 자동 빈 이름과 수동 빈 이름 중복시... 스프링부트에서는 막아버린다.
+    @Bean(name = "memoryMemberRepository")
     public MemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }*/
