@@ -1,12 +1,12 @@
 plugins {
-	id 'org.springframework.boot' version '2.4.3'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'org.springframework.boot' version '2.7.3'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
 	id 'java'
 }
 
 group = 'core'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '17'
 
 //lombok 설정 추가 시작
 configurations {
@@ -30,12 +30,10 @@ dependencies {
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
 
-	implementation 'jaxax.inject:javax.inject:1'
-
 	//web 라이브러리 추가
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
-test {
+tasks.named('test') {
 	useJUnitPlatform()
 }
